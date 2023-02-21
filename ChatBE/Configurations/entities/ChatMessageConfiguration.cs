@@ -11,6 +11,9 @@ namespace ChatBE.Configurations.entities
             builder.HasKey(x => x.Id);
             builder.HasOne(x => x.User).WithMany(x => x.Messages);
             builder.HasOne(x => x.Room).WithMany(x => x.ChatMessages);
+            builder.Property(x => x.Id).IsRequired();
+            builder.Property(x => x.Message).HasMaxLength(10);
+
         }
     }
 }
