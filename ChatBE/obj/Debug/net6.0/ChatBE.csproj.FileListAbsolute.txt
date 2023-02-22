@@ -160,3 +160,11 @@ D:\SignalrC#\ChatHub\ChatBE\obj\Debug\net6.0\ChatBE.genruntimeconfig.cache
 D:\SignalrC#\ChatHub\ChatBE\obj\Debug\net6.0\ref\ChatBE.dll
 D:\SignalrC#\ChatHub\ChatBE\obj\Debug\net6.0\ChatBE.Properties.Resource.resources
 D:\SignalrC#\ChatHub\ChatBE\obj\Debug\net6.0\ChatBE.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\BE\ChatHub\ChatBE\bin\Debug\net6.0\JetBrains.Annotations.dll
+C:\Users\Admin\Desktop\BE\ChatHub\ChatBE\bin\Debug\net6.0\PagedList.dll
+C:\Users\Admin\Desktop\BE\ChatHub\ChatBE\bin\Debug\net6.0\PagedList.Mvc.dll
+C:\Users\Admin\Desktop\BE\ChatHub\ChatBE\bin\Debug\net6.0\X.PagedList.dll
+C:\Users\Admin\Desktop\BE\ChatHub\ChatBE\bin\Debug\net6.0\X.PagedList.Mvc.Core.dll
+C:\Users\Admin\Desktop\BE\ChatHub\ChatBE\obj\Debug\net6.0\ChatBE.Properties.Resource.resources
+C:\Users\Admin\Desktop\BE\ChatHub\ChatBE\obj\Debug\net6.0\ChatBE.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\BE\ChatHub\ChatBE\bin\Debug\net6.0\System.Net.WebSockets.WebSocketProtocol.dll

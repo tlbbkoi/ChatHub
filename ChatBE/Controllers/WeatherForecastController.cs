@@ -1,4 +1,3 @@
-using Microsoft.AspNet.SignalR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ChatBE.Controllers
@@ -21,7 +20,6 @@ namespace ChatBE.Controllers
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
-        [Authorize]
 
         public IEnumerable<WeatherForecast> Get()
         {
