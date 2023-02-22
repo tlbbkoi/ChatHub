@@ -4,14 +4,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ChatBE.Data
 {
-    public class DatabaseContext : DbContext
+    public class DatabaseContext : IdentityDbContext<User>
     {
-        public DatabaseContext(DbContextOptions options) : base(options) { }
+        public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) { }
 
         public DbSet<ChatMessage> Messages { get; set; }
         public DbSet<Participants> Participants { get; set; }
         public DbSet<Room> Rooms { get; set; }
-        public DbSet<User> User { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -20,7 +19,8 @@ namespace ChatBE.Data
             builder.ApplyConfiguration(new ChatMessageConfiguration());
             builder.ApplyConfiguration(new ParticipantsConfiguration());
             builder.ApplyConfiguration(new RoomConfiguration());
-            builder.ApplyConfiguration(new UserConfiguration());
+            builder.ApplyConfiguration(new RoleConfiguration());
+            //builder.ApplyConfiguration(new UserConfiguration());
 
         }
     }
