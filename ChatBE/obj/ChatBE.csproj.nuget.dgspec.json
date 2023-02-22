@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SignalrC#\\ChatHub\\ChatBE\\ChatBE.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\BE\\ChatHub\\ChatBE\\ChatBE.csproj": {}
   },
   "projects": {
-    "D:\\SignalrC#\\ChatHub\\ChatBE\\ChatBE.csproj": {
+    "C:\\Users\\Admin\\Desktop\\BE\\ChatHub\\ChatBE\\ChatBE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SignalrC#\\ChatHub\\ChatBE\\ChatBE.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\BE\\ChatHub\\ChatBE\\ChatBE.csproj",
         "projectName": "ChatBE",
-        "projectPath": "D:\\SignalrC#\\ChatHub\\ChatBE\\ChatBE.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\SignalrC#\\ChatHub\\ChatBE\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\BE\\ChatHub\\ChatBE\\ChatBE.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\BE\\ChatHub\\ChatBE\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -60,6 +60,10 @@
               "target": "Package",
               "version": "[6.0.14, )"
             },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.14, )"
@@ -93,8 +97,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -106,7 +109,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

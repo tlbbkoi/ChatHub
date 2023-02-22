@@ -1,11 +1,11 @@
 using ChatBE.Configurations.mapper;
 using ChatBE.Data;
+using ChatBE.Hubs;
 using ChatBE.Reponsitory;
 using ChatBE.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
@@ -67,6 +67,9 @@ builder.Services.AddCors(o =>
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IAumanager, Authmanager>();
 builder.Services.AddAutoMapper(typeof(MapperInitilizer));
+builder.Services.AddSignalR();
+builder.Services.AddTransient<IChatService, ChatService>();
+
 
 builder.Services.AddAuthentication(options =>
 {
@@ -112,5 +115,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapHub<ChatHub>("/Chat");
 
 app.Run();
