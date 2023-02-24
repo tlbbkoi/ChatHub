@@ -1,10 +1,11 @@
-using Microsoft.AspNet.SignalR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ChatBE.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
+    [Authorize]
 
     public class WeatherForecastController : ControllerBase
     {
@@ -21,7 +22,6 @@ namespace ChatBE.Controllers
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
-        [Authorize]
 
         public IEnumerable<WeatherForecast> Get()
         {

@@ -81,6 +81,11 @@ namespace ChatBE.Reponsitory
                     .ToPagedListAsync(requestParams.PageNumber, requestParams.PageSize);
             }
 
+            public IQueryable<T> GetQuery()
+            {
+                return _db;
+            }
+
             public async Task Insert(T entity)
             {
                 await _db.AddAsync(entity);

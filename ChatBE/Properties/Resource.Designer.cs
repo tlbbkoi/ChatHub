@@ -88,6 +88,24 @@ namespace ChatBE.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Đăng xuất k thành công.
+        /// </summary>
+        public static string LOGOUT_FAIL {
+            get {
+                return ResourceManager.GetString("LOGOUT_FAIL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Đăng xuất thành công.
+        /// </summary>
+        public static string LOGOUT_SUCCESS {
+            get {
+                return ResourceManager.GetString("LOGOUT_SUCCESS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Đăng ký thành công.
         /// </summary>
         public static string REGISTER_SUCCESS {

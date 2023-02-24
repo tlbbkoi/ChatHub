@@ -4,6 +4,7 @@ using ChatBE.Model;
 using ChatBE.Properties;
 using ChatBE.Reponsitory;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -124,7 +125,6 @@ namespace ChatBE.Services
 
                 throw new BusinessException(error[0]);
             }
-
             await _userManager.AddToRolesAsync(user, userDTO.Roles);
             return true;
         }
@@ -139,9 +139,23 @@ namespace ChatBE.Services
             throw new BusinessException(Resource.LOGIN_ERR);
         }
 
-        public Task<string> Logout()
+        public async Task<string> Logout()
         {
-            throw new NotImplementedException();
+            var identity = (ClaimsIdentity)_httpContextAccessor.HttpContext.User.Identity;
+            //Gets list of claims.
+            IEnumerable<Claim> claims = identity.Claims;
+
+            var usernameClaim = claims
+                .Where(x => x.Type == ClaimTypes.Name)
+                .FirstOrDefault();
+
+            var user = await _userManager.FindByNameAsync(usernameClaim.Value);
+            var result = await _userManager.RemoveAuthenticationTokenAsync(user, "Web", "Access");
+            if (result.Succeeded)
+            {
+                return Resource.LOGOUT_SUCCESS;
+            }
+            throw new BusinessException(Resource.LOGOUT_FAIL);
         }
     }
 }

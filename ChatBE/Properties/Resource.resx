@@ -126,6 +126,12 @@
   <data name="LOGIN_SUC" xml:space="preserve">
     <value>Đăng nhập thành công</value>
   </data>
+  <data name="LOGOUT_FAIL" xml:space="preserve">
+    <value>Đăng xuất k thành công</value>
+  </data>
+  <data name="LOGOUT_SUCCESS" xml:space="preserve">
+    <value>Đăng xuất thành công</value>
+  </data>
   <data name="REGISTER_SUCCESS" xml:space="preserve">
     <value>Đăng ký thành công</value>
   </data>

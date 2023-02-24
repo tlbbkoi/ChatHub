@@ -7,6 +7,7 @@ namespace ChatBE.Reponsitory
 {
     public interface IGenericRespository<T> where T : class
     {
+        IQueryable<T> GetQuery();
         Task<IList<T>> GetAll(
             Expression<Func<T, bool>> expression = null,
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
